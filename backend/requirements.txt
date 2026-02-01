@@ -1,0 +1,14 @@
+langchain
+langgraph
+langchain-groq
+dotenv
+pinecone
+pdfreader
+fastapi
+uvicorn
+psycopg2
+langchain-unstructured
+langchain-community
+langchain_huggingface
+langchain-pinecone
+sentence-transformers
