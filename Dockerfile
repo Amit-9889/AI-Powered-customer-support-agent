@@ -5,12 +5,12 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.lock.txt .
+COPY requirements.txt .
 
 RUN pip install --upgrade pip && \
     pip wheel --no-cache-dir \
       --extra-index-url https://download.pytorch.org/whl/cpu \
-      -r requirements.lock.txt \
+      -r requirements.txt \
       -w /wheels
 
 # ---------- Runtime ----------
