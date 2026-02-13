@@ -8,7 +8,7 @@ class intent_validator:
 
     @classmethod
     def has_order_id(cls,text)->str | None:
-        match = re.search(r'(?:#)?(PC\d{5,})', text)
+        match = re.search(r'(?:#)?([A-Z]{2}\d{5,})', text)
         return match.group(1) if match else None
 
     def validate_order(self,state:AgentState):
